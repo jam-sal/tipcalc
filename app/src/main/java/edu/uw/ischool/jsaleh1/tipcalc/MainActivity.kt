@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
         })
 
         button.setOnClickListener {
-            val amount = serviceAmt.text.toString().replace("$", "").toDouble()
+            val amount = current.replace("$", "").toDouble()
             val tipAmount = amount * 0.15
             val formattedTip = NumberFormat.getCurrencyInstance().format(tipAmount)
             val toastMessage = "Tip Amount: $formattedTip"
